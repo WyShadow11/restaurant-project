@@ -1,3 +1,40 @@
 .container{
-  color: green;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  height: 80px;
+  z-index: 111;
+  position: fixed;
+  width: 100%;
+}
+
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem{
+  color: lightgrey;
+  margin: 0px 20px;
+  font-size: 18px;
+}
+
+.listItem:last-child{
+  border: 1px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.listItem:last-child:hover{
+  background-color: white;
+  color: black;
 }
