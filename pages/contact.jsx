@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Reservations from '@/components/Reservations'
+import Contact from '@/components/Contact'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,6 +22,7 @@ export default function Home() {
 
       <Navbar></Navbar>
       <Reservations></Reservations>
+
       <Footer></Footer>
 
       

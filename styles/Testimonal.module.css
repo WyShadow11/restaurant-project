@@ -1,8 +1,9 @@
 .container{
   height: 500px;
-  background-image: url("/img/testimonal.jpg");
+  background-image: url("/img/testimonial.jpg");
   background-size: cover;
   position: relative;
+  background-position: bottom;
 }
 
 .overlay{
@@ -47,7 +48,7 @@
   background-color: #1E1810;
   color: white;
   width: 400px;
-  height: 250px;
+  height: 275px;
   border-radius: 15px;
   position: relative;
   padding: 10px;
@@ -58,7 +59,7 @@
   top: -50px;
   right: 50%;
   transform: translateX(50%);
-  border: 5px solid orangered;
+  border: 5px solid white;
   border-radius: 50%;
 }
 

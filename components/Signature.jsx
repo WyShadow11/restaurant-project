@@ -8,7 +8,7 @@ const Signature = () => {
       <div className={styles.titleText}>
           <h2 className={styles.heading}>HOMEMADE</h2>
           <h1 className={styles.title}>Signature Menu</h1>
-          <p className={styles.content}>Neque elit, rutrum in laoreet nec eget scelerisque volutpat sit. Bibendum tincidunt a scelerisque consectetur ultrices elementum pulvinar non. </p>
+          <p className={styles.content}>Embark on a tantalizing journey with our sushi restaurant's special menu, a symphony of innovative rolls and exquisite flavors meticulously crafted to elevate your sushi experience. </p>
       </div>
     </div>
   )
