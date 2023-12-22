@@ -1,25 +1,26 @@
 .hero{
-  display: block;
-  height: 100vh;
-}
-
-.hero:before{
-  content: ' ';
-  background-image: url("/img/hero1.jpg");
+  height: 700px;
+  position: relative;
+  background-image: url("/img/ContactHero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  background-position: bottom;
+  
+}
+
+.overlay{
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
 }
 
 .content{
   position: absolute;
-  top: 25%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   line-height: 20px;
 }

@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Reservations from '@/components/Reservations'
 import Contact from '@/components/Contact'
+import ContactHero from '@/components/ContactHero'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,8 +22,9 @@ export default function Home() {
       </Head>
 
       <Navbar></Navbar>
+      <ContactHero></ContactHero>
       <Reservations></Reservations>
-
+      <Contact></Contact>
       <Footer></Footer>
 
       
