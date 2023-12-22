@@ -1,0 +1,40 @@
+.container{
+  position: relative;
+  background-color: white;
+  height: 1000px;
+  padding: 100px 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 150px;
+}
+
+.left{
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.item{
+  left: 50%;
+  width: 520px;
+}
+
+.text{
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text p{
+  line-height: 30px;
+}
+

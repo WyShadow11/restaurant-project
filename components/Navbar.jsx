@@ -14,7 +14,7 @@ const Navbar = () => {
           <li className={styles.listItem}>Menu</li>
           <li className={styles.listItem}>Testimonial</li>
           <li className={styles.listItem}>Contact</li>
-          <li className={styles.listItem}>Menu</li>
+          <li className={styles.listItem}>Order</li>
         </ul>
       </div>
     </div>
