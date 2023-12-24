@@ -1,9 +1,9 @@
-import styles from "@/styles/FoodList.module.css";
+import styles from "@/styles/FoodCard.module.css";
 import Image from "next/image";
 import Link from "next/link"
 
 
-const SushiCard = ({sushi}) => {
+const FoodCard = ({sushi}) => {
   return(
           <div className={styles.categoryCard}>
               <div className={styles.imgContainer}>
@@ -24,4 +24,4 @@ const SushiCard = ({sushi}) => {
   )
 }
 
-export default SushiCard;
+export default FoodCard;

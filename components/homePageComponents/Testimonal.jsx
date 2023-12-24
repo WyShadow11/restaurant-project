@@ -1,4 +1,4 @@
-import styles from "../styles/Testimonal.module.css";
+import styles from "@/styles/Testimonal.module.css";
 import Image from "next/image";
 
 const Testimonal = () => {

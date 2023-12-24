@@ -1,4 +1,4 @@
-import styles from "../styles/Reservations.module.css";
+import styles from "@/styles/Reservations.module.css";
 import Image from "next/image";
 
 const Reservations = () => {

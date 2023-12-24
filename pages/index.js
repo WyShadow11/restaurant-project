@@ -3,16 +3,16 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
+import Hero from '@/components/homePageComponents/Hero'
 import Footer from '@/components/Footer'
-import Questions from '@/components/Questions'
-import Reservations from '@/components/Reservations'
-import Map from '@/components/Map'
-import Testimonal from '@/components/Testimonal'
-import Gallery from '@/components/Gallery'
-import Signature from '@/components/Signature'
-import Menu from '@/components/Menu'
-import Location from '@/components/Location'
+import Questions from '@/components/homePageComponents/Questions'
+import Reservations from '@/components/homePageComponents/Reservations'
+import Map from '@/components/homePageComponents/Map'
+import Testimonal from '@/components/homePageComponents/Testimonal'
+import Gallery from '@/components/homePageComponents/Gallery'
+import Signature from '@/components/homePageComponents/Signature'
+import MenuImage from '@/components/homePageComponents/MenuImage'
+import Location from '@/components/homePageComponents/Location'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +27,7 @@ export default function Home() {
       </Head>
       <Hero></Hero>
       <Location></Location>
-      <Menu id="menu"></Menu>
+      <MenuImage/>
       <Signature></Signature>
       <Gallery></Gallery>
       <Testimonal></Testimonal>

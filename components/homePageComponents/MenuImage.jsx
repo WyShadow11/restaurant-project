@@ -1,7 +1,7 @@
-import styles from "../styles/Menu.module.css";
+import styles from "@/styles/Menu.module.css";
 import Image from "next/image";
 
-const Menu = () => {
+const MenuImage = () => {
   return(
     <>
     <div className={styles.container}>
@@ -17,4 +17,4 @@ const Menu = () => {
 }
 
 
-export default Menu;
+export default MenuImage;

@@ -1,4 +1,4 @@
-import styles from "../styles/ContactHero.module.css";
+import styles from "@/styles/ContactHero.module.css";
 import Image from "next/image";
 
 const ContactHero = () => {

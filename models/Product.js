@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const ProductSchema = new mongoose.Schema({
+  type:{
+    type:String,
+    require:true,
+  }
   title:{
     type:String,
     required:true,
@@ -16,15 +20,14 @@ const ProductSchema = new mongoose.Schema({
     required:true,
   },
   price:{
-    type:String,
+    type:Number,
     required:true,
-    maxLength: 60,
   },
   extraOptions:{
     type:[
       {
         text:{type:String, required:true}, 
-        price:{type:String, required:true},
+        price:{type:Number, required:true},
       }
     ],
   },  

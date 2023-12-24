@@ -1,4 +1,4 @@
-import styles from "../styles/Questions.module.css"
+import styles from "@/styles/Questions.module.css"
 import Image from "next/image";
 
 const Questions= () => {

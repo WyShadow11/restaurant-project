@@ -1,4 +1,4 @@
-import styles from "../styles/Location.module.css";
+import styles from "@/styles/Location.module.css";
 import Image from "next/image";
 
 const Location = () => {
