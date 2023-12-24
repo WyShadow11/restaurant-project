@@ -5,6 +5,19 @@ import axios from "axios";
 
 const Product = ({sushi}) => {
 
+    const sushi1 = {
+      "title": "2 Roll",
+      "desc": "desc2",
+      "img": "/img/food/alaskaRoll.png",
+      "price": "14.95",
+      "extraOptions": [
+          {
+              "text": "Spicy",
+              "price": "2"
+          }
+      ]
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -13,7 +26,7 @@ const Product = ({sushi}) => {
         </div>
       </div>
       <div className={styles.right}>
-        <h1 className={styles.title}>{sushi.name}</h1>
+        <h1 className={styles.title}>{sushi.title}</h1>
         <span className={styles.price}>${sushi.price}</span>
         <p className={styles.desc}>{sushi.desc}</p>
         <h3 className={styles.choose}>Choose additional ingredients</h3>
@@ -64,13 +77,14 @@ const Product = ({sushi}) => {
   );
 };
 
-export const getServerSideProps = async ( {params} ) => {
+export const getServerSideProps = async ({params}) => {
   const res = await axios.get(`http://localhost:3000/api/products/${params.id}`);
-  return{
+  return {
     props:{
-      sushi: res.data, 
+      sushi: res.data,
     },
   };
 };
+
 
 export default Product;
