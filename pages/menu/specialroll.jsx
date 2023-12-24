@@ -2,7 +2,8 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import MenuList from '@/components/Menu components/MenuList'
 import MenuNavBar from '@/components/Menu components/MenuNavbar'
-import BeverageList from '@/components/Menu components/BeverageList'
+import BeverageList from '@/components/Menu components/Food List/BeverageList'
+import SushiList from '@/components/Menu components/Food List/SushiList'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MenuNavBar></MenuNavBar>
-      <BeverageList></BeverageList>
+      <SushiList></SushiList>
     </>
   )
 }

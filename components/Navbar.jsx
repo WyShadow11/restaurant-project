@@ -14,9 +14,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className={styles.mainHeader}>
-        <div className={styles.item}>
-          <Image src="/img/logo.png" width="200" height="60"></Image>
-        </div>
+        <a href="/">
+          <div className={styles.item}>
+            <Image src="/img/logo.png" width="200" height="60"></Image>
+          </div>
+        </a>
         <div className={styles.item}>
           <ul className={styles.list}>
             <li className={styles.listItem}><a href="/">Home</a></li>

@@ -32,10 +32,12 @@ const MenuNavBar = () => {
         </div>
       </div>
       <div className={styles.main}>
-
         <div className={styles.search}>
           <input type="text" placeholder="Search"/>
           <button className={styles.searchbtn}>Search</button>
+        </div>
+
+        <div className={styles.cartbtn}>
         </div>
       </div>
     </div>
