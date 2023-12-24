@@ -1,27 +1,21 @@
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import axios from "axios";
 
-const Product = () => {
-  const pizza = {
-    id: 1,
-    img: "/img/food/alaskaRoll.png",
-    name: "Alaska Roll",
-    price: "14.95",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu purus, rhoncus fringilla vestibulum vel, dignissim vel ante. Nulla facilisi. Nullam a urna sit amet tellus pellentesque egestas in in ante.",
-  };
+const Product = ({sushi}) => {
 
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
-          <Image src={pizza.img} objectFit="contain" layout="fill" alt="" />
+          <Image src={sushi.img} objectFit="contain" layout="fill" alt="" />
         </div>
       </div>
       <div className={styles.right}>
-        <h1 className={styles.title}>{pizza.name}</h1>
-        <span className={styles.price}>${pizza.price}</span>
-        <p className={styles.desc}>{pizza.desc}</p>
+        <h1 className={styles.title}>{sushi.name}</h1>
+        <span className={styles.price}>${sushi.price}</span>
+        <p className={styles.desc}>{sushi.desc}</p>
         <h3 className={styles.choose}>Choose additional ingredients</h3>
         <div className={styles.ingredients}>
           <div className={styles.option}>
@@ -68,6 +62,15 @@ const Product = () => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async ( {params} ) => {
+  const res = await axios.get(`http://localhost:3000/api/products/${params.id}`);
+  return{
+    props:{
+      sushi: res.data, 
+    },
+  };
 };
 
 export default Product;

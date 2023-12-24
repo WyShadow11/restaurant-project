@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import axios from 'axios'
 import { Inter } from 'next/font/google'
 import MenuList from '@/components/Menu components/MenuList'
 import MenuNavBar from '@/components/Menu components/MenuNavbar'
@@ -8,7 +9,7 @@ import SushiList from '@/components/Menu components/Food List/SushiList'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({ sushiList }) {
   return (
     <>
       <Head>
@@ -18,7 +19,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MenuNavBar></MenuNavBar>
-      <SushiList></SushiList>
+      <SushiList sushiList={sushiList}></SushiList>
     </>
   )
+}
+
+export const getServerSideProps = async () =>{
+  const res = await axios.get("http://localhost:3000/api/products");
+  return{
+    props:{
+      sushiList: res.data, 
+    }
+  }
 }
