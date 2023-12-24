@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 
 const ProductSchema = new mongoose.Schema({
-  type:{
-    type:String,
-    require:true,
-  }
   title:{
     type:String,
     required:true,
     maxLength: 60,
+  },
+  category:{
+    type:String,
+    required:true,
   },
   desc:{
     type:String,
