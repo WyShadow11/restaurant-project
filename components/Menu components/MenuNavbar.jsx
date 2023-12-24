@@ -1,7 +1,8 @@
-import styles from "../styles/MenuList.module.css";
+import styles from "@/styles/MenuList.module.css";
 import Image from "next/image";
 
-const MenuList = () => {
+
+const MenuNavBar = () => {
   return(
     <div className={styles.container}>
       <div className={styles.sidebar}>
@@ -10,6 +11,7 @@ const MenuList = () => {
           <button className={styles.orderbtn}>ORDER NOW</button>
         </div>
         <div className={styles.sidebarMenus}>
+          <a href="/menu">All Categoies</a>
           <a href="#">Appetizer</a>
           <a href="#">Sushi-Appetizer</a>
           <a href="#">Soup</a>
@@ -25,21 +27,20 @@ const MenuList = () => {
           <a href="#">D-Hib Kids</a>
           <a href="#">D-Hib Special</a>
           <a href="#">Teriyaki</a>
-          <a href="#">Beverage</a>
+          <a href="/beverages">Beverage</a>
           <a href="#">D-Hib Side</a>
         </div>
       </div>
       <div className={styles.main}>
-      <div className={styles.search}>
-        <input type="text" placeholder="Search"/>
-        <button className={styles.searchbtn}>Search</button>
+
+        <div className={styles.search}>
+          <input type="text" placeholder="Search"/>
+          <button className={styles.searchbtn}>Search</button>
+        </div>
       </div>
-      </div>
-      
-      
     </div>
   )
 }
 
 
-export default MenuList;
+export default MenuNavBar;

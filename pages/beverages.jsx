@@ -1,14 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import Reservations from '@/components/Reservations'
-import Contact from '@/components/Contact'
-import ContactHero from '@/components/ContactHero'
-import PizzaCard from '@/components/PizzaCard'
-import PizzaList from '@/components/PizzaList'
+import MenuList from '@/components/Menu components/MenuList'
+import MenuNavBar from '@/components/Menu components/MenuNavbar'
+import BeverageList from '@/components/Menu components/BeverageList'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,7 +16,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PizzaList></PizzaList>
+      <MenuNavBar></MenuNavBar>
+      <BeverageList></BeverageList>
     </>
   )
 }
