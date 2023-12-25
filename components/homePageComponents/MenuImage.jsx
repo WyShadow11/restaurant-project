@@ -1,4 +1,4 @@
-import styles from "@/styles/Menu.module.css";
+import styles from "@/styles/MenuImage.module.css";
 import Image from "next/image";
 
 const MenuImage = () => {

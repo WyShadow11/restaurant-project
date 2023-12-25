@@ -1,16 +1,9 @@
-import styles from "@/styles/MenuList.module.css";
+import styles from "@/styles/Menu.module.css";
 import Image from "next/image";
-import SushiList from "./Food List/SushiList";
-import Head from 'next/head'
-import axios from 'axios'
-import { Inter } from 'next/font/google'
-import MenuList from '@/components/Menu components/MenuList'
-import BeverageList from '@/components/Menu components/Food List/BeverageList'
+import { useSelector } from "react-redux";
 
-
-
-
-export const MenuNavBar = ( {children}) => {
+export const Menu = ( {children}) => {
+  const quantity = useSelector(state => state.cart.quantity)
   return(
     <div className={styles.container}>
       <div className={styles.sidebar}>
@@ -26,8 +19,8 @@ export const MenuNavBar = ( {children}) => {
           <a href="#">Salad</a>
           <a href="#">Roll</a>
           <a href="#">Sushi/Sashimi</a>
-          <a href="#">Dessert</a>
-          <a href="#">Special Roll</a>
+          <a href="/specialroll">Dessert</a>
+          <a href="/menu/specialroll">Special Roll</a>
           <a href="#">Sushi-Entree</a>
           <a href="#">Yaki Udon</a>
           <a href="#">Yaki Soba</a>
@@ -40,12 +33,11 @@ export const MenuNavBar = ( {children}) => {
         </div>
       </div>
       <div className={styles.main}>
-        <div className={styles.search}>
-          <input type="text" placeholder="Search"/>
-          <button className={styles.searchbtn}>Search</button>
-        </div>
-
-        <div className={styles.cartbtn}>
+        <div className={styles.mainNavBar}>
+          <div className={styles.search}>
+            <input type="text" placeholder="Search"/>
+            <button className={styles.searchbtn}>Search</button>
+          </div>
         </div>
         <div className={styles.cardsWrapper}>
           {children}
@@ -55,15 +47,6 @@ export const MenuNavBar = ( {children}) => {
   )
 }
 
-export const getServerSideProps = async () =>{
-  const res = await axios.get("http://localhost:3000/api/products");
-  return{
-    props:{
-      foodList: res.data, 
-    }
-  }
-}
-
-export default MenuNavBar;
+export default Menu;
 
 

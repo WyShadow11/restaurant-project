@@ -3,21 +3,21 @@ import Image from "next/image";
 import Link from "next/link"
 
 
-const FoodCard = ({sushi}) => {
+const FoodCard = ({food}) => {
   return(
           <div className={styles.categoryCard}>
               <div className={styles.imgContainer}>
-                <Link href={`/product/${sushi._id}`}>
-                  <Image className={styles.categoryImage} src={sushi.img} layout="fill"></Image>
+                <Link href={`/product/${food._id}`}>
+                  <Image className={styles.categoryImage} src={food.img} layout="fill"></Image>
                 </Link>
               </div>
               <div className={styles.cardtext}>
-                <h1 className={styles.categoryTitle}>{sushi.title}</h1>
+                <h1 className={styles.categoryTitle}>{food.title}</h1>
                 <p className={styles.price}>
-                  ${sushi.price}
+                  ${food.price}
                 </p>
                 <p className={styles.desc}>
-                  {sushi.desc}
+                  {food.desc}
                 </p>
               </div>
           </div>

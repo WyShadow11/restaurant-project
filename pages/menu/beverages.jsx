@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import MenuList from '@/components/Menu components/MenuList'
-import MenuNavBar from '@/components/Menu components/MenuNavbar'
+import MenuNavBar from '@/components/Menu components/Menu'
 import BeverageList from '@/components/Menu components/Food List/BeverageList'
 
 
